@@ -26,9 +26,11 @@ return (
                 </div>
             </div>
         </nav>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-60 py-36 lg:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-60 py-16 lg:py-32">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                {/* Hide image section on mobile with hidden md:block */}
                 <div
+                    className="hidden md:block"
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                     style={{ minHeight: 400 }}
@@ -54,9 +56,11 @@ return (
                         className={`h-30 w-auto rounded-3xl absolute left-80 top-120 transition-all duration-1500 ${isHovered ? '-translate-x-30' : ''}`}
                     />
                 </div>
-                <div className="absolute left-200 top-30 space-y-8">
+                
+                {/* Text content - adjusted positioning for mobile */}
+                <div className="space-y-8 text-center lg:text-left lg:absolute lg:left-200 lg:top-30">
                     <div>
-                        <h1 className="font-mono font-semibold text-5xl lg:text-[84px] text-gray-900 leading-tight">
+                        <h1 className="font-mono font-semibold text-4xl md:text-5xl lg:text-[84px] text-gray-900 leading-tight">
                             Helping
                             <br />
                             <span className="text-gray-900">you grow</span>
@@ -66,15 +70,15 @@ return (
                     </div>
 
                     <div className="space-y-6">
-                        <p className="text-xl text-gray-400 leading-relaxed">
-                            Let’s work together to align your finances with your goals.
-                            <br />
+                        <p className="text-lg lg:text-xl text-gray-400 leading-relaxed">
+                            Let's work together to align your finances with your goals.
+                            <br className="hidden lg:block" />
                             Feel free to connect or message to explore, 
-                            <br />
+                            <br className="hidden lg:block" />
                             <span className="text-gray-400">how we can assist in your financial journey.</span>
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4">
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <a href="#footer" className="bg-yellow-400 text-black px-8 py-3 rounded-full font-semibold hover:bg-yellow-500 transition-colors flex items-center justify-center">
                                 Contact us
                             </a>
